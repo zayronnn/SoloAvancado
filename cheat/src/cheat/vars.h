@@ -12,6 +12,7 @@ public:
 	CONFIG_ENTRY_HOTKEY(bool, Blong, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, Blongg, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, NoCooldown, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, NoCooldownShadow, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, GodMode, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, KillAura, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, DamageHack, false, Hotkey());

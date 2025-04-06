@@ -11,18 +11,20 @@ void Gui::Render()
     ImGui::Begin(xorstr("##Taiga74164"), nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
     {
         ImGui::BeginGroup();
-        {
-            ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 0));
-            GuiUtil::CenterText(xorstr("Mindware l License: 01/01 l HWID: **********"), 0, 0);
-            ImGui::Spacing();
-            ImGui::Spacing();
-            ImGui::PopStyleColor();
-        }
-        ImGui::EndGroup();
+{
+    ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 0));
+    GuiUtil::CenterText(xorstr("Mindware l discord.gg/xyFuZw7gdz l License: 01/01 l HWID: **********"), 0, 0);
+    ImGui::Spacing();
+    ImGui::Spacing();
+    ImGui::PopStyleColor();
+}
+ImGui::EndGroup();
 
-		GuiUtil::RainbowLine();
-		ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 0));
-		ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
+// Comente ou remova esta linha para eliminar o efeito de cor
+// GuiUtil::RainbowLine();
+
+ImGui::PushStyleColor(ImGuiCol_ChildBg, IM_COL32(0, 0, 0, 0));
+ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 		ImGui::PopStyleColor();
 		{
 			ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 5);
@@ -57,33 +59,34 @@ void Gui::Render()
 			ImGui::CheckboxFill(xorstr("Regenera Instantaneo HP"), &vars.Blongg.value()); HELPMAKER(xorstr("Pressione Espaco"));
 
 			ImGui::CheckboxFill(xorstr("Skill Infinita"), &vars.NoCooldown.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
-
-			ImGui::CheckboxFill(xorstr("Dano Hack"), &vars.DamageHack.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
-			if (vars.DamageHack.value())
-				ImGui::SliderInt(xorstr("Valor"), &vars.DamageHackValue.value(), 100, 100000, "%d");
 			
-			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), xorstr("(Coloque apenas valores legit, para passar a fase)")); // Texto vermelho
+			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco nao determinado)"), &vars.NoCooldownShadow.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
+			
+			ImGui::CheckboxFill(xorstr("Inimigos Burros"), &vars.DumbEnemies.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
 
-			ImGui::CheckboxFill(xorstr("Acelera partida"), &vars.TimeScale.value());  HELPMAKER(xorstr("O seu jogo e acelerado e o tempo tambem."));
-			if (vars.TimeScale.value())
-				ImGui::SliderFloat(xorstr("Velocidade"), &vars.TimeScaleSpeed.value(), 1.0f, 10.0f, "%.1f");
+			ImGui::CheckboxFill(xorstr("Dano Hack(Risco de Aviso)"), &vars.DamageHack.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
+			if (vars.DamageHack.value())
+				ImGui::SliderInt(xorstr("Valor"), &vars.DamageHackValue.value(), 100, 70000, "%d");
+			
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Coloque apenas valores legit, para passar a fase)")); // Texto vermelho
+			
 				
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 
-			 ImGui::CheckboxFill(xorstr("Inimigos Burros (Risco, precisa de teste)"), &vars.DumbEnemies.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
-
-			ImGui::CheckboxFill(xorstr("Modo Deus (Risco medio"), &vars.GodMode.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
+			ImGui::CheckboxFill(xorstr("Modo Deus (Risco medio)"), &vars.GodMode.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
 
 			ImGui::CheckboxFill(xorstr("Kill Aura (Risco Alto de Ban)"), &vars.KillAura.value()); HELPMAKER(xorstr("O dano e absurdo, cuidado!"));
 						ImGui::Spacing();
-									ImGui::Spacing();
-												ImGui::Spacing();
+			ImGui::Spacing();
+			ImGui::Spacing();
+			ImGui::Spacing();
+			ImGui::Spacing();
 			
-			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), xorstr("(Recomendamos o uso em uma conta ALT)")); // Texto vermelho
-			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), xorstr("(Nao use o produto no capitulo 12, missao final)")); // Texto vermelho
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Recomendamos o uso em uma conta ALT)")); // Texto vermelho
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Nao use o produto no capitulo 12, missao final)")); // Texto vermelho
 
 			ImGui::EndGroup();
 			ImGui::PopStyleVar();
@@ -108,6 +111,7 @@ void Gui::Render()
 			ImGui::InputHotkey(xorstr("Regenera Instantaneo MP"), vars.Blong);
 			ImGui::InputHotkey(xorstr("Regenera Instantaneo HP"), vars.Blongg);
 			ImGui::InputHotkey(xorstr("Skilll Infinita"), vars.NoCooldown);
+			ImGui::InputHotkey(xorstr("Skilll Infinita Sombras"), vars.NoCooldownShadow);
 			ImGui::InputHotkey(xorstr("Modo Deus"), vars.GodMode);
 			ImGui::InputHotkey(xorstr("Dano Hack"), vars.DamageHack);
 			ImGui::InputHotkey(xorstr("Inimigos Burros"), vars.DumbEnemies);

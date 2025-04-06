@@ -11,7 +11,7 @@ namespace Cheat::Features
     {
         // Sistema de valores pré-calculados
         constexpr int64_t DAMAGE_VALUES[] = {1, 2, 3, 4, 5};
-        constexpr int64_t MP_RECOVERY_VALUES[] = {200, 250, 300};
+        constexpr int64_t MP_RECOVERY_VALUES[] = {250, 300, 350};
         constexpr int64_t HP_RECOVERY_VALUES[] = {400, 450, 500};
         
         // Índices rotativos para valores pseudo-aleatórios
@@ -73,7 +73,7 @@ namespace Cheat::Features
                 specialState == app::ESpecialState__Enum::DotDamage))
             {
                 return CALL_ORIGIN(PIPHNBOBFEF_KBCIIEFLPGB_Hook, __this, 
-                    app::ESpecialState__Enum::FixDamage, 
+                    app::ESpecialState__Enum::FixDamage,
                     DAMAGE_VALUES[GetRotatingIndex(damageIndex, std::size(DAMAGE_VALUES))], 
                     0i64, 0i64, buffName, method);
             }
@@ -86,10 +86,10 @@ namespace Cheat::Features
             if (vars.DamageHack.value())
             {
                 const int64_t modifiedDamage = vars.DamageHackValue.value() + 
-                                             (GetRotatingIndex(damageIndex, 5) * 50); // Variação de dano
+                                             (GetRotatingIndex(damageIndex, 5) * 500); // Variação de dano
                 
                 return CALL_ORIGIN(PIPHNBOBFEF_KBCIIEFLPGB_Hook, __this, 
-                    app::ESpecialState__Enum::FixDamage, 
+                    app::ESpecialState__Enum::FixDamage,
                     modifiedDamage, 
                     0i64, 0i64, buffName, method);
             }

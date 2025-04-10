@@ -11,8 +11,8 @@ namespace Cheat::Features
     {
         // Sistema de valores pré-calculados
         constexpr int64_t DAMAGE_VALUES[] = {1, 2, 3, 4, 5};
-        constexpr int64_t MP_RECOVERY_VALUES[] = {250, 300, 350};
-        constexpr int64_t HP_RECOVERY_VALUES[] = {400, 450, 500};
+        constexpr int64_t MP_RECOVERY_VALUES[] = {500, 550, 600};
+        constexpr int64_t HP_RECOVERY_VALUES[] = {650, 700, 750};
         
         // Índices rotativos para valores pseudo-aleatórios
         static size_t damageIndex = 0;

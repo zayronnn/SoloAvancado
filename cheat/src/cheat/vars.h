@@ -16,7 +16,7 @@ public:
 	CONFIG_ENTRY_HOTKEY(bool, GodMode, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, KillAura, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, DamageHack, false, Hotkey());
-	CONFIG_ENTRY(int, DamageHackValue, 20000);
+	CONFIG_ENTRY(int, DamageHackValue, 100);
 	CONFIG_ENTRY_HOTKEY(bool, DumbEnemies, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, TimeScale, false, Hotkey());
 	CONFIG_ENTRY(float, TimeScaleSpeed, 2.0f);

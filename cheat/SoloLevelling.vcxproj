@@ -86,7 +86,6 @@
     <ClInclude Include="src\appdata\il2cpp-types.h" />
     <ClInclude Include="src\cheat\cheat.h" />
     <ClInclude Include="src\cheat\features\DamageHack.h" />
-    <ClInclude Include="src\cheat\features\Debug.h" />
     <ClInclude Include="src\cheat\features\DumbEnemies.h" />
     <ClInclude Include="src\cheat\features\FovChanger.h" />
     <ClInclude Include="src\cheat\features\GodMode.h" />
@@ -116,9 +115,6 @@
     <ClInclude Include="src\HotkeyManager.hpp" />
     <ClInclude Include="src\main.h" />
     <ClInclude Include="src\Memory.h" />
-    <ClInclude Include="src\methods\Assembly-CSharp.hpp" />
-    <ClInclude Include="src\methods\mscorlib.hpp" />
-    <ClInclude Include="src\methods\UnityEngine.CoreModule.hpp" />
     <ClInclude Include="src\Module.h" />
     <ClInclude Include="src\ModuleManager.h" />
     <ClInclude Include="src\Render\Backend\DX11Hook.h" />
@@ -157,7 +153,6 @@
     <ClCompile Include="src\appdata\il2cpp-init.cpp" />
     <ClCompile Include="src\cheat\cheat.cpp" />
     <ClCompile Include="src\cheat\features\DamageHack.cpp" />
-    <ClCompile Include="src\cheat\features\Debug.cpp" />
     <ClCompile Include="src\cheat\features\DumbEnemies.cpp" />
     <ClCompile Include="src\cheat\features\FovChanger.cpp" />
     <ClCompile Include="src\cheat\features\GodMode.cpp" />

@@ -64,7 +64,7 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			
 			ImGui::CheckboxFill(xorstr("Inimigos Burros"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
 
-			ImGui::CheckboxFill(xorstr("Dano Hack(Risco de Aviso)"), &vars.Miconho.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
+			ImGui::CheckboxFill(xorstr("Dano Hack (Risco de Aviso)"), &vars.Miconho.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
 			if (vars.Miconho.value())
 				ImGui::SliderInt(xorstr("Valor"), &vars.MiconhoNovoValue.value(), 100, 70000, "%d");
 			
@@ -76,7 +76,7 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 
-			ImGui::CheckboxFill(xorstr("Modo Deus (Risco medio)"), &vars.Jerav.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
+			ImGui::CheckboxFill(xorstr("Modo Deus (Risco baixo)"), &vars.Jerav.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
 
 			ImGui::CheckboxFill(xorstr("Kill Aura (Risco Alto de Ban)"), &vars.Blade.value()); HELPMAKER(xorstr("O dano e absurdo, cuidado!"));
 						ImGui::Spacing();

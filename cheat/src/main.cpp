@@ -1,7 +1,6 @@
 ﻿#include "main.h"
 #include <Utils.h>
 #include "ConfigManager.hpp"
-#include "UnityResolve.hpp"
 #include "appdata/helpers.h"
 #include "appdata/il2cpp-init.h"
 #include "cheat/cheat.h"
@@ -22,7 +21,7 @@ void Run(HMODULE hModule)
 	
 	Init(Renderer::DXVersion::D3D11);
 
-	UnityResolve::Init(GetModuleHandleA(xorstr("GameAssembly.dll")), UnityResolve::Mode::Il2Cpp);
+	//UnityResolve::Init(GetModuleHandleA(xorstr("GameAssembly.dll")), UnityResolve::Mode::Il2Cpp);
 
 	init_il2cpp();
 	init_cheat();

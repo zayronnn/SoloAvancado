@@ -95,10 +95,6 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(2, 2));
 			ImGui::BeginGroup();
 
-			ImGui::CheckboxFill(xorstr("Desbloquear FPS"), &vars.FPSUnlock.value());
-			if (vars.FPSUnlock.value())
-				ImGui::SliderInt(xorstr("FPS"), &vars.FPSValue.value(), 5, 360, "%d");
-
 			ImGui::CheckboxFill(xorstr("Mudar Fov"), &vars.FovChanger.value());
 			if (vars.FovChanger.value())
 				ImGui::SliderFloat(xorstr("Fov"), &vars.Fov.value(), 1.0f, 360.0f, "%.1f");
@@ -115,8 +111,6 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::InputHotkey(xorstr("Modo Deus"), vars.GodMode);
 			ImGui::InputHotkey(xorstr("Dano Hack"), vars.DamageHack);
 			ImGui::InputHotkey(xorstr("Inimigos Burros"), vars.DumbEnemies);
-			ImGui::InputHotkey(xorstr("Acelera partida"), vars.TimeScale);
-			ImGui::InputHotkey(xorstr("Desbloquear FPS"), vars.FPSUnlock);
 			ImGui::InputHotkey(xorstr("Mudar FOV"), vars.FovChanger);
 
 			break;

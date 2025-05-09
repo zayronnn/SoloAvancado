@@ -16,7 +16,3 @@
 #include "events/handlers/functoreventhandler.hpp"
 #include "events/joins/handlereventjoin.hpp"
 #include "events/joins/eventjoinwrapper.hpp"
-
-#include "methods/Assembly-CSharp.hpp"
-#include "methods/mscorlib.hpp"
-#include "methods/UnityEngine.CoreModule.hpp"

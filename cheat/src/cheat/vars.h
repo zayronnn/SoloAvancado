@@ -18,12 +18,8 @@ public:
 	CONFIG_ENTRY_HOTKEY(bool, DamageHack, false, Hotkey());
 	CONFIG_ENTRY(int, DamageHackValue, 100);
 	CONFIG_ENTRY_HOTKEY(bool, DumbEnemies, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, TimeScale, false, Hotkey());
-	CONFIG_ENTRY(float, TimeScaleSpeed, 2.0f);
 
 	// Misc
-	CONFIG_ENTRY_HOTKEY(bool, FPSUnlock, false, Hotkey());
-	CONFIG_ENTRY(int, FPSValue, 240);
 	CONFIG_ENTRY_HOTKEY(bool, FovChanger, false, Hotkey());
 	CONFIG_ENTRY(float, Fov, 60.0f);
 };

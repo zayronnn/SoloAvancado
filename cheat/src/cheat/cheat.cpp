@@ -9,10 +9,7 @@
 #include "features/GodMode.h"
 #include "features/DumbEnemies.h"
 #include "features/FovChanger.h"
-#include "features/FPSUnlock.h"
-#include "features/TimeScale.h"
 #include "features/Debug.h"
-#include "features/EntityManager.h"
 
 using namespace Cheat::Features;
 
@@ -25,11 +22,8 @@ void init_cheat()
 	INIT_FEATURE(DamageHack);
 	INIT_FEATURE(GodMode);
 	INIT_FEATURE(DumbEnemies);
-	INIT_FEATURE(TimeScale);
-	INIT_FEATURE(FPSUnlock);
 	INIT_FEATURE(FovChanger);
 	INIT_FEATURE(Debug);
-	//INIT_FEATURE(EntityManager);
 #undef INIT_FEATURE
 
 	HookManager::install(app::GameFrameWork_Update, GameFrameWork_Update_Hook);

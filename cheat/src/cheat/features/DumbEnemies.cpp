@@ -18,7 +18,7 @@ namespace Cheat::Features
 		if (character->fields.FHNGHHPLPGD == app::eCharGroup__Enum::ENEMY ||
 			character->fields.AJEHLIOMMJN == app::ECharacterType__Enum::Monster)
 		{
-			if (vars.DumbEnemies.value())
+			if (vars.Burro.value())
 			{
 				character->fields.KFIFBINFDPB->fields.m_pCharBattleInfo->fields.m_SidewalkMinTime = std::numeric_limits<float>::infinity() * -1.0f;
 				character->fields.KFIFBINFDPB->fields.m_pCharBattleInfo->fields.m_SidewalkMaxTime = std::numeric_limits<float>::infinity() * -1.0f;

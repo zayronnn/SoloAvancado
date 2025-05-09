@@ -17,7 +17,7 @@ namespace Cheat::Features
 			auto entity = __this->fields.KCBLLGODKIE;
 			if (entity->fields.FHNGHHPLPGD == app::eCharGroup__Enum::PLAYER)
 			{
-				if (vars.NoCooldown.value())
+				if (vars.Novidade.value())
 				{
 					__this->fields.HPHOOEPCBOJ = 0.5;
 					__this->fields.JCJJDJGOBJL = 0;

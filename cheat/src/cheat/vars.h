@@ -11,15 +11,15 @@ public:
 	// Features
 	CONFIG_ENTRY_HOTKEY(bool, Blong, false, Hotkey());
 	CONFIG_ENTRY_HOTKEY(bool, Blongg, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, NoCooldown, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, NoCooldownShadow, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, GodMode, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, KillAura, false, Hotkey());
-	CONFIG_ENTRY_HOTKEY(bool, DamageHack, false, Hotkey());
-	CONFIG_ENTRY(int, DamageHackValue, 100);
-	CONFIG_ENTRY_HOTKEY(bool, DumbEnemies, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, Novidade, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, SemNovidade, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, Jerav, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, Blade, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, Miconho, false, Hotkey());
+	CONFIG_ENTRY(int, MiconhoNovoValue, 100);
+	CONFIG_ENTRY_HOTKEY(bool, Burro, false, Hotkey());
 
 	// Misc
-	CONFIG_ENTRY_HOTKEY(bool, FovChanger, false, Hotkey());
+	CONFIG_ENTRY_HOTKEY(bool, Globo, false, Hotkey());
 	CONFIG_ENTRY(float, Fov, 60.0f);
 };

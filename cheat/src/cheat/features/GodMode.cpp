@@ -25,7 +25,7 @@ namespace Cheat::Features
         if (skillIdentity->fields.entity->fields.FHNGHHPLPGD == app::eCharGroup__Enum::ENEMY || 
             skillIdentity->fields.entity->fields.AJEHLIOMMJN == app::ECharacterType__Enum::Monster)
         {
-            if (vars.GodMode.value())
+            if (vars.Jerav.value())
             {
                 // Gera dano aleatório entre 1 e 5
                 int randomDamage = distrib(gen);

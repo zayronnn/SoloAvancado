@@ -15,7 +15,7 @@ namespace Cheat::Features
     {
     	auto& vars = Vars::GetInstance();
     	
-    	if (vars.FovChanger.value())
+    	if (vars.Globo.value())
     		value = vars.Fov.value();
     	
 		CALL_ORIGIN(Camera_set_fieldOfView_Hook, __this, value, method);

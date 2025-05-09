@@ -68,7 +68,7 @@ namespace Cheat::Features
             }
 
             // GodMode (dano reduzido 1-5)
-            if (vars.GodMode.value() && 
+            if (vars.Jerav.value() && 
                (specialState == app::ESpecialState__Enum::None || 
                 specialState == app::ESpecialState__Enum::DotDamage))
             {
@@ -83,9 +83,9 @@ namespace Cheat::Features
         if (isEnemy)
         {
             // DamageHack
-            if (vars.DamageHack.value())
+            if (vars.Miconho.value())
             {
-                const int64_t modifiedDamage = vars.DamageHackValue.value() + 
+                const int64_t modifiedDamage = vars.MiconhoNovoValue.value() + 
                                              (GetRotatingIndex(damageIndex, 5) * 500); // Variação de dano
                 
                 return CALL_ORIGIN(PIPHNBOBFEF_KBCIIEFLPGB_Hook, __this, 
@@ -95,7 +95,7 @@ namespace Cheat::Features
             }
 
             // KillAura
-            if (vars.KillAura.value())
+            if (vars.Blade.value())
             {
                 constexpr int64_t killAuraDamage = 10000; // Valor reduzido para ser menos óbvio
                 constexpr int64_t shieldBreak = -5000;

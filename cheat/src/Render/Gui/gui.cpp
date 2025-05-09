@@ -58,15 +58,15 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::CheckboxFill(xorstr("Regenera Instantaneo MP"), &vars.Blong.value()); HELPMAKER(xorstr("Pressione Espaco"));
 			ImGui::CheckboxFill(xorstr("Regenera Instantaneo HP"), &vars.Blongg.value()); HELPMAKER(xorstr("Pressione Espaco"));
 
-			ImGui::CheckboxFill(xorstr("Skill Infinita"), &vars.NoCooldown.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
+			ImGui::CheckboxFill(xorstr("Skill Infinita"), &vars.Novidade.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
 			
-			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco nao determinado)"), &vars.NoCooldownShadow.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
+			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco nao determinado)"), &vars.SemNovidade.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
 			
-			ImGui::CheckboxFill(xorstr("Inimigos Burros"), &vars.DumbEnemies.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
+			ImGui::CheckboxFill(xorstr("Inimigos Burros"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
 
-			ImGui::CheckboxFill(xorstr("Dano Hack(Risco de Aviso)"), &vars.DamageHack.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
-			if (vars.DamageHack.value())
-				ImGui::SliderInt(xorstr("Valor"), &vars.DamageHackValue.value(), 100, 70000, "%d");
+			ImGui::CheckboxFill(xorstr("Dano Hack(Risco de Aviso)"), &vars.Miconho.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
+			if (vars.Miconho.value())
+				ImGui::SliderInt(xorstr("Valor"), &vars.MiconhoNovoValue.value(), 100, 70000, "%d");
 			
 			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Coloque apenas valores legit, para passar a fase)")); // Texto vermelho
 			
@@ -76,9 +76,9 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 
-			ImGui::CheckboxFill(xorstr("Modo Deus (Risco medio)"), &vars.GodMode.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
+			ImGui::CheckboxFill(xorstr("Modo Deus (Risco medio)"), &vars.Jerav.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
 
-			ImGui::CheckboxFill(xorstr("Kill Aura (Risco Alto de Ban)"), &vars.KillAura.value()); HELPMAKER(xorstr("O dano e absurdo, cuidado!"));
+			ImGui::CheckboxFill(xorstr("Kill Aura (Risco Alto de Ban)"), &vars.Blade.value()); HELPMAKER(xorstr("O dano e absurdo, cuidado!"));
 						ImGui::Spacing();
 			ImGui::Spacing();
 			ImGui::Spacing();
@@ -95,8 +95,8 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(2, 2));
 			ImGui::BeginGroup();
 
-			ImGui::CheckboxFill(xorstr("Mudar Fov"), &vars.FovChanger.value());
-			if (vars.FovChanger.value())
+			ImGui::CheckboxFill(xorstr("Mudar Fov"), &vars.Globo.value());
+			if (vars.Globo.value())
 				ImGui::SliderFloat(xorstr("Fov"), &vars.Fov.value(), 1.0f, 360.0f, "%.1f");
 
 
@@ -106,12 +106,13 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 		case 2: // Hotkeys
 			ImGui::InputHotkey(xorstr("Regenera Instantaneo MP"), vars.Blong);
 			ImGui::InputHotkey(xorstr("Regenera Instantaneo HP"), vars.Blongg);
-			ImGui::InputHotkey(xorstr("Skilll Infinita"), vars.NoCooldown);
-			ImGui::InputHotkey(xorstr("Skilll Infinita Sombras"), vars.NoCooldownShadow);
-			ImGui::InputHotkey(xorstr("Modo Deus"), vars.GodMode);
-			ImGui::InputHotkey(xorstr("Dano Hack"), vars.DamageHack);
-			ImGui::InputHotkey(xorstr("Inimigos Burros"), vars.DumbEnemies);
-			ImGui::InputHotkey(xorstr("Mudar FOV"), vars.FovChanger);
+			ImGui::InputHotkey(xorstr("Skilll Infinita"), vars.Novidade);
+			ImGui::InputHotkey(xorstr("Skilll Infinita Sombras"), vars.SemNovidade);
+			ImGui::InputHotkey(xorstr("Modo Deus"), vars.Jerav);
+			ImGui::InputHotkey(xorstr("Dano Hack"), vars.Miconho);
+			ImGui::InputHotkey(xorstr("Kill Aura"), vars.Blade);
+			ImGui::InputHotkey(xorstr("Inimigos Burros"), vars.Burro);
+			ImGui::InputHotkey(xorstr("Mudar FOV"), vars.Globo);
 
 			break;
 		case 3: // About

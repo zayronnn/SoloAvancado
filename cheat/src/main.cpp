@@ -21,7 +21,7 @@ void Run(HMODULE hModule)
     Init(Renderer::DXVersion::D3D11);
     init_il2cpp();
 
-    LOG(xorstr("[SoloLevelling] Cheat aguardando F2 no lobby para iniciar..."));
+    LOG(xorstr("[SoloLevelling] APÓS O JOGO CARREGAR, AGUARDEM 10 MINUTOS, E APÓS APERTEM A TECLA F2, PARA NÃO SEREM DETECTADOS E NECESSÁRIO AGUARDAR ESSE TEMPO."));
 
     // Aguarda o jogador apertar F2
     while (!(GetAsyncKeyState(VK_F2) & 1))
@@ -29,7 +29,7 @@ void Run(HMODULE hModule)
         Sleep(100);
     }
 
-    LOG(xorstr("[SoloLevelling] F2 pressionado — inicializando cheat..."));
+    LOG(xorstr(" F2 pressionado — Produto Ativo e Liberado para usar..."));
 
     init_cheat();
 

@@ -8,7 +8,7 @@ void Gui::Render()
 {
 	auto& vars = Vars::GetInstance();
 	
-    ImGui::Begin(xorstr("##Taiga74164"), nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
+    ImGui::Begin(xorstr("##Mindware"), nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar);
     {
         ImGui::BeginGroup();
 {
@@ -55,14 +55,14 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(2, 2));
 			ImGui::BeginGroup();
 
-			ImGui::CheckboxFill(xorstr("Regenera Instantaneo MP"), &vars.Blong.value()); HELPMAKER(xorstr("Pressione Espaco"));
-			ImGui::CheckboxFill(xorstr("Regenera Instantaneo HP"), &vars.Blongg.value()); HELPMAKER(xorstr("Pressione Espaco"));
+			ImGui::CheckboxFill(xorstr("Regenera Instantaneo MP (Seguro)"), &vars.Blong.value()); HELPMAKER(xorstr("Pressione Espaco"));
+			ImGui::CheckboxFill(xorstr("Regenera Instantaneo HP (Seguro)"), &vars.Blongg.value()); HELPMAKER(xorstr("Pressione Espaco"));
 
 			ImGui::CheckboxFill(xorstr("Skill Infinita"), &vars.Novidade.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
 			
-			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco nao determinado)"), &vars.SemNovidade.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
+			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco de Aviso)"), &vars.SemNovidade.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
 			
-			ImGui::CheckboxFill(xorstr("Inimigos Burros"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
+			ImGui::CheckboxFill(xorstr("Inimigos Burros (Seguro)"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
 
 			ImGui::CheckboxFill(xorstr("Dano Hack (Risco de Aviso)"), &vars.Miconho.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
 			if (vars.Miconho.value())
@@ -76,7 +76,7 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			 ImGui::Spacing();
 			 ImGui::Spacing();
 			 
-			ImGui::CheckboxFill(xorstr("Modo Deus (Risco baixo)"), &vars.Jerav.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
+			ImGui::CheckboxFill(xorstr("Modo Deus (Risco de Aviso)"), &vars.Jerav.value()); HELPMAKER(xorstr("Nao recomendo o uso, e bom sempre tomar dano, voce leva dano entre 1 a 5 para enviar dados pro servidor."));
 
 			ImGui::CheckboxFill(xorstr("Kill Aura (Risco Alto de Ban)"), &vars.Blade.value()); HELPMAKER(xorstr("O dano e absurdo, cuidado!"));
 						ImGui::Spacing();
@@ -84,9 +84,9 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::Spacing();
 			ImGui::Spacing();
 			ImGui::Spacing();
+			ImGui::Spacing();
 			
-			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Recomendamos o uso em uma conta ALT)")); // Texto vermelho
-			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(Nao use o produto no capitulo 12, missao final)")); // Texto vermelho
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(APÓS O JOGO CARREGAR, AGUARDEM 10 MINUTOS, E APÓS APERTEM A TECLA F2, PARA NÃO SEREM DETECTADOS E NECESSÁRIO AGUARDAR ESSE TEMPO.)")); // Texto vermelho
 
 			ImGui::EndGroup();
 			ImGui::PopStyleVar();

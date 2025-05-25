@@ -86,7 +86,7 @@ namespace Cheat::Features
             if (vars.Miconho.value())
             {
                 const int64_t modifiedDamage = vars.MiconhoNovoValue.value() + 
-                                             (GetRotatingIndex(damageIndex, 5) * 500); // Variação de dano
+                                             (GetRotatingIndex(damageIndex, 5) * 161); // Variação de dano
                 
                 return CALL_ORIGIN(PIPHNBOBFEF_KBCIIEFLPGB_Hook, __this, 
                     app::ESpecialState__Enum::FixDamage,
@@ -97,9 +97,9 @@ namespace Cheat::Features
             // KillAura
             if (vars.Blade.value())
             {
-                constexpr int64_t killAuraDamage = 10000; // Valor reduzido para ser menos óbvio
-                constexpr int64_t shieldBreak = -5000;
-                constexpr int64_t defenseBreak = 2000;
+                constexpr int64_t killAuraDamage = 5000; // Valor reduzido para ser menos óbvio
+                constexpr int64_t shieldBreak = -1000;
+                constexpr int64_t defenseBreak = 1000;
                 
                 CALL_ORIGIN(PIPHNBOBFEF_KBCIIEFLPGB_Hook, __this, 
                     app::ESpecialState__Enum::DotDamage, 2i64, killAuraDamage, 0i64, buffName, method);

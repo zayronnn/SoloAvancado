@@ -58,7 +58,7 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::CheckboxFill(xorstr("Regenera Instantaneo MP (Seguro)"), &vars.Blong.value()); HELPMAKER(xorstr("Pressione Espaco"));
 			ImGui::CheckboxFill(xorstr("Regenera Instantaneo HP (Seguro)"), &vars.Blongg.value()); HELPMAKER(xorstr("Pressione Espaco"));
 
-			ImGui::CheckboxFill(xorstr("Skill Infinita"), &vars.Novidade.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
+			ImGui::CheckboxFill(xorstr("Skill Infinita (Risco baixo)"), &vars.Novidade.value()); HELPMAKER(xorstr("Caso use em conjunto com o Dano Hack, analise o Dano do F e o dano padrao, se estiver alto ajuste o dano hack"));
 			
 			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco de Aviso)"), &vars.SemNovidade.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
 			
@@ -86,7 +86,14 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			ImGui::Spacing();
 			ImGui::Spacing();
 			
-			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("(APÓS O JOGO CARREGAR, AGUARDEM 10 MINUTOS, E APÓS APERTEM A TECLA F2, PARA NÃO SEREM DETECTADOS E NECESSÁRIO AGUARDAR ESSE TEMPO.)")); // Texto vermelho
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("AO ENTRAR NA PARTE JOGÁVEL, AGUARDE 10 MINUTOS,")); // Texto vermelho
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("NÃO ATIVE AINDA, APENAS ATIVE QUANDO DER 10 MINUTOS.")); // Texto vermelho
+			
+			ImGui::Spacing();
+			ImGui::Spacing();
+			
+			ImGui::TextColored(ImVec4(0.4f, 0.9098f, 0.5412f, 1.0f), xorstr("TECLA DE ATIVAÇÃO   F2")); // Texto vermelho
+			
 
 			ImGui::EndGroup();
 			ImGui::PopStyleVar();

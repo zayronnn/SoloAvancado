@@ -175,7 +175,7 @@ namespace Backend
 
 	void DX11Hook::InitializeHooks()
 	{
-		LOG(xorstr("Initialized DX11Hook."));
+		//LOG(xorstr("Initialized DX11Hook."));
 		
 		fnIDXGISwapChainPresent = FindPresent();
 		if (fnIDXGISwapChainPresent == nullptr)
@@ -186,6 +186,6 @@ namespace Backend
 
 		HookManager::install(fnIDXGISwapChainPresent, PresentHook);
 		
-		LOG(xorstr("DX11Hook Hooks installed."));
+		//LOG(xorstr("DX11Hook Hooks installed."));
 	}
 }

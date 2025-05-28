@@ -62,7 +62,7 @@ ImGui::BeginChild(xorstr("##LeftSide"), ImVec2(100, GuiUtil::GetY()), TRUE);
 			
 			ImGui::CheckboxFill(xorstr("Skill Infinita Sombras (Risco de Aviso)"), &vars.SemNovidade.value()); HELPMAKER(xorstr("Habilite somente se você tiver o recurso de sombra disponível"));
 			
-			ImGui::CheckboxFill(xorstr("Inimigos Burros (Seguro)"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
+			ImGui::CheckboxFill(xorstr("Inimigos Burros (Risco de Aviso)"), &vars.Burro.value()); HELPMAKER(xorstr("Isso evitara que os inimigos ataquem ou se movam em sua direcao, recomendo levar dano."));
 
 			ImGui::CheckboxFill(xorstr("Dano Hack (Risco de Aviso)"), &vars.Miconho.value()); HELPMAKER(xorstr("Recomendo colocar valores que voce precisa passar a fase, nao abuse"));
 			if (vars.Miconho.value())
